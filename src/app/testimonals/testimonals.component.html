@@ -1,0 +1,33 @@
+ <app-header></app-header>
+ 
+  <!-- PAGE TITLE SECTION-->
+    <section class="pageTitleSection">
+      <div class="container">
+       <div class="pageTitleInfo">
+          <h2>Testimonial</h2>
+          <ol class="breadcrumb">
+            <li><a href="index-v1.html">Home</a></li>
+            <li class="active">Testimonial</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN SECTION -->
+    <section class="mainContent full-width clearfix testimonialArea">
+      <div class="container">
+        <div class="row testimonial-grid">
+          <li *ngFor = "let testimonal of testimonals">
+          <div class="col-sm-4 col-xs-12">
+            <div class="testimonialContent  {{testimonal.review_bg_color}}">
+              <span class="userSign {{testimonal.review_border_color}}"><i class="fa fa-quote-left {{testimonal.review_color}}" aria-hidden="true"></i></span>
+              <p>{{testimonal.review}}</p>
+              <h3>{{testimonal.reviewer}}<br> <small>{{testimonal.review_date}}</small></h3>
+            </div>
+          </div></li>
+         
+        </div>
+      </div>
+    </section>
+
+    <app-footer></app-footer>

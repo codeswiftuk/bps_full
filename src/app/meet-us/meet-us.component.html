@@ -1,0 +1,44 @@
+<app-header></app-header>
+
+<!-- PAGE TITLE SECTION-->
+    <section class="pageTitleSection">
+      <div class="container">
+       <div class="pageTitleInfo">
+          <h2>Testimonial</h2>
+          <ol class="breadcrumb">
+            <li><a href="index-v1.html">Home</a></li>
+            <li class="active">Meet Us</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+<li *ngFor = "let teacher of teachers">
+
+<section class="mainContent full-width clearfix">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 col-xs-12">
+            <div class="teachersPhoto">
+              <img src="{{teacher.image}}" alt="image" class="img-rounded img-responsive">
+            </div>
+          </div>
+          <div class="col-sm-8 col-xs-12">
+            <div class="teachersInfo">
+              <h3>{{teacher.name}}</h3>
+              <p>
+                {{teacher.bio}}
+              </p>
+              <h3>Teachers Information</h3>
+              <div class="teachersProfession bg-color-1">Role</div>
+              <div class="professionDetails">{{teacher.role}}</div>
+              <div class="teachersProfession bg-color-2">Qualificatons</div>
+              <div class="professionDetails">{{teacher.qualificatons}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</li>
+
+<app-footer></app-footer>
